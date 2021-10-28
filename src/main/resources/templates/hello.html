@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+th:include 片段名引入
+<div th:include="commons::fragment-name"></div>
+<!--th:include id 选择器引入-->
+<div th:include="commons::#fragment-id"></div>
+------------------------------------------------
+<!--th:replace 片段名引入-->
+<div th:replace="commons::fragment-name"></div>
+<!--th:replace id 选择器引入-->
+<div th:replace="commons::#fragment-id"></div>
+------------------------------------------------
+<!--th:insert 片段名引入-->
+<div th:insert="commons::fragment-name"></div>
+<!--th:insert id 选择器引入-->
+<div th:insert="commons::#fragment-id"></div>
+<!--th:text 为 Thymeleaf 属性，用于在展示文本-->
+<h1 th:text="迎您来到Thymeleaf">欢迎您访问静态页面 HTML</h1>
+<h1 th:text="${key}"></h1>
+<P th:text="#{login.btn}"></P>
+</body>
+</html>
